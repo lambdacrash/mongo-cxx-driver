@@ -836,8 +836,6 @@ if nix:
     # env.Append( " -Wconversion" ) TODO: this doesn't really work yet
     if linux or darwin:
         env.Append( CCFLAGS=["-pipe"] )
-        if not has_option("disable-warnings-as-errors"):
-            env.Append( CCFLAGS=["-Werror"] )
 
     env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
     env.Append( CXXFLAGS=["-Wnon-virtual-dtor", "-Woverloaded-virtual"] )
